@@ -64,10 +64,14 @@ a.nav-link {
 }
 
 img.logo {
-    width: 18.75rem;
+    /* width: 18.75rem; */
+    height: 100px;
+    width: auto;
 }
 
-.active {
+/* ----- */
+
+/* .active {
     border-bottom: 2px solid var(--blue);
     font-weight: 500;
 }
@@ -84,10 +88,10 @@ body {
     flex-direction: column;
     height: calc(100vh - 60px);
     justify-content: center;
-    overflow-x: hidden; /* Hide horizontal scrollbar on smaller screens */
-}
+    overflow-x: hidden; /* Hide horizontal scrollbar on smaller screens 
+}*/
 
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -159,7 +163,7 @@ h2, p {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-}
+}  */
 
 @media screen and (min-width: 768px) {
     .container {
