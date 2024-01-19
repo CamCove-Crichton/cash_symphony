@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-ALLOWED_HOSTS = [os.environ.get("HOST"), "localhost"]
+ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost']
 
 
 # Application definition
