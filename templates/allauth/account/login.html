@@ -19,6 +19,7 @@
 </div>
 <div class="row">
   <div class="col-md-6 offset-md-3">
+    <div class="form-container">
     <form class="login" method="POST" action="{% url 'account_login' %}">
       {% csrf_token %}
       {{ form|crispy }}
@@ -31,6 +32,7 @@
           Forgot Password?</a>
       </div>
     </form>
+  </div>
   </div>
 </div>
 {% endblock %}
