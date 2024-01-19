@@ -1,4 +1,36 @@
 <header>
+  <a href="{% url 'home' %}"><h1>Cash Symphony</h1></a>
+  <!-- Test for budget view -->
+  <a href="{% url 'view_budget' %}">Budget</a>
+    <div>
+      <li class="list-inline-item dropdown">
+        <a
+        href="#"
+        class="nav-link"
+        id="user-options"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+          <div class="text-center">
+            <div>
+              <i class="fa-solid fa-circle-user fa-lg"></i>
+            </div>
+            <p class="my-0">Account</p>
+          </div>
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+          {% if request.user.is_authenticated %}
+          <a href="#" class="dropdown-item">Profile</a>
+          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+          {% else %}
+          <a href="{% url 'account_signup' %}" class="dropdown-item">Signup</a>
+          <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+          {% endif %}
+        </div>
+      </li>
+        <!-- <button id="signUpBtn">Sign Up</button>
+        <button id="signInBtn">Sign In</button> -->
+    </div>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -8,7 +40,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
