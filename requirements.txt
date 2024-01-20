@@ -7,9 +7,12 @@ cryptography==41.0.7
 defusedxml==0.7.1
 Django==5.0.1
 django-allauth==0.60.1
+django-crispy-bootstrap==0.1.1.1
 django-crispy-forms==2.1
+django-resized==1.0.2
 idna==3.6
 oauthlib==3.2.2
+pillow==10.2.0
 pycparser==2.21
 PyJWT==2.8.0
 python-dotenv==1.0.0
