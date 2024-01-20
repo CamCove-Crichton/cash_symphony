@@ -1,0 +1,37 @@
+{% load static %}
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#"><img src="{% static 'images/website-logo.png' %}" alt="Recipe Sharing & Meal Planner Logo" class="logo"></a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link {% if url_name == 'profile' %}active{% endif %}" href="{% url 'profile' request.user.id %}">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if url_name == 'accounts_logout' %}active{% endif %}" href="/accounts/logout">Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link {% if url_name == 'accounts_signup' %}active{% endif %}" href="/accounts/signup">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if url_name == 'accounts_login' %}active{% endif %}" href="/accounts/login">Login</a>
+              </li>
+              {% endif %}                            
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</header>
