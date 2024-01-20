@@ -18,29 +18,3 @@
     </div>
 </div>
 {% endblock %}
-
-{% block extra_js %}
-<!-- I am not sure this js is required anymore -->
-<script>
-    const signUpBtn = document.getElementById('signUpBtn');
-    const signInBtn = document.getElementById('signInBtn');
-    const signUpFormContainer = document.getElementById('signUpFormContainer');
-    const signInFormContainer = document.getElementById('signInFormContainer');
-    const formHeading = document.querySelector('.right h2');
-    const image = document.querySelector('.left img');
-
-    signUpBtn.addEventListener('click', function () {
-        signUpFormContainer.style.display = 'flex';
-        signInFormContainer.style.display = 'none';
-        formHeading.style.display = 'block';
-        image.style.display = 'none'; // Add this line to hide the image
-    });
-
-    signInBtn.addEventListener('click', function () {
-        signInFormContainer.style.display = 'flex';
-        signUpFormContainer.style.display = 'none';
-        formHeading.style.display = 'block';
-        image.style.display = 'none'; // Add this line to hide the image
-    });
-</script>
-{% endblock %}
