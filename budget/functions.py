@@ -2,6 +2,7 @@ from datetime import datetime
 import calendar
 from decimal import Decimal
 from .models import Expense
+from home.models import Profile
 
 
 def get_num_of_weekly_payments(start_date, first_day, last_day):
@@ -64,7 +65,7 @@ def get_outgoing_expense(year_and_month):
     # get regularly recurring expenses that will happen in the current month
     # (those with 'frequency' value of daily, weekly or monthly AND
     #  that haven't been stopped earlier than that month)
-    list_recurr_exp = Expense.objects.filter(indefinite=True).order_by('created_on')
+    list_recurr_exp = Expense.objects.filter(type="recurring", end_date__gte=first_day_month).order_by('created_on')
     list_recurr_exp = []
     sum_recurr_exp = 0
     last_day = None
@@ -97,3 +98,18 @@ def get_outgoing_expense(year_and_month):
     sum_decimal = sum_once_off_exp + sum_recurr_exp
     sum_str = str("{:.2f}".format(sum_decimal))
     return sum_str
+
+
+def get_remaining_budget(user_id, month, year):
+    """
+    calculate remaining budget and return it.
+
+    Argument user_id
+    Return remaining budget
+    Rtype string
+    """
+    """
+    income = Profile.objects.filter(id=user_id)[0].income
+    spending = get_outgoing_expense((year, month))
+    return Decimal(income) - Decimal(spending)
+    """
