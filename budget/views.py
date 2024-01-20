@@ -3,12 +3,15 @@ from .functions import get_num_of_weekly_payments, get_outgoing_expense
 
 
 """
-two functions are available here.
+Two functions are available here.
 happy coding!!
 
-(1, 1, 2024)
+get_remaining_budget(1, 1, 2024)
     arg: request.user.id(int), month(int), year(int)
     return: string
+When Profile model is done, please comment
+line 5 and the bottom of functions.py
+
 get_outgoing_expense((2024, 1))
     arg: tuple(int: year, int: str)
     return string "xxx.xx"

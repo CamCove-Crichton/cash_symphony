@@ -20,7 +20,6 @@ class Expense(models.Model):
     frequency = models.IntegerField(choices=FREQUENCY, default=0)
     start_date = models.DateTimeField(null=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
-    indefinite = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 

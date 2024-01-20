@@ -9,12 +9,10 @@ def get_num_of_weekly_payments(start_date, first_day, last_day):
     """
     Calculate and return the number of times
     a given weekly payment will be made in the month.
-
     Args:
         start_date (datetime): the start date of the expense entry
         first_day (datetime): the fist day of the time period of interedst
         last_day (datetime): the last day of the time period
-
     Returns:
         int: number of times that the given payment will be made in the month
     """
@@ -98,12 +96,19 @@ def get_outgoing_expense(year_and_month):
     sum_str = str("{:.2f}".format(sum_decimal))
     return sum_str
 
+
 def get_remaining_budget(user_id, month, year):
     """
+    calculate remaining budget and return it.
+    Arguments: user id(int), month(int), year(int)
+    :return: budget
+    :rtype: str
+    """
+    """Comment the following when Profile model is ready.
     profile = Profile.objects.filter(owner=user)[0]
     year_month = tuple(year, month)
     expenses = get_outgoing_expense(year_month)
     amount = Decimal(profile.income) - Decimal(expenses)
     """
-    amount = "3500.00"
+    amount = "3500.00" # remove this later
     return amount
