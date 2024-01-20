@@ -1,8 +1,34 @@
 from datetime import datetime
 import calendar
 from decimal import Decimal
-from home.models import Profile
 from .models import Expense
+
+
+def get_num_of_weekly_payments(start_date, first_day, last_day):
+    """
+    Calculate and return the number of times
+    a given weekly payment will be made in the month.
+
+    Args:
+        start_date (datetime): the start date of the expense entry
+        first_day (datetime): the fist day of the time period of interedst
+        last_day (datetime): the last day of the time period
+
+    Returns:
+        int: number of times that the given payment will be made in the month
+    """
+    # get the weekday of the 1st day of the time period
+    wd_start = first_day.weekday()
+    # get the weekday of the last day in the time period
+    wd_end = last_day.weekday()
+    # get the weekday that we're counting
+    wd_target = start_date.weekday()
+    # how many of the specific weekday we have in the time period
+    num_occ = round((last_day.day - first_day.day) / 7)
+    if wd_start < wd_target < wd_end:
+        # in this condition, you get an extra day
+        num_occ += 1
+    return num_occ
 
 
 def get_outgoing_expense(year_and_month):
