@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+body {
+    background-color: #417690;
+}
 :root {
     /** Fonts */
     --title: 'EB Garamond', serif;
