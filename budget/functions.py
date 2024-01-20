@@ -2,7 +2,7 @@ from datetime import datetime
 import calendar
 from decimal import Decimal
 from .models import Expense
-from home.models import Profile
+# from home.models import Profile
 
 
 def get_num_of_weekly_payments(start_date, first_day, last_day):
