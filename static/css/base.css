@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
-body {
-    background-color: #417690;
-}
+
 :root {
     /** Fonts */
     --title: 'EB Garamond', serif;
@@ -21,7 +19,7 @@ body {
     --border: 1px solid #00000030;
 }
 
-*html, body {
+html, body {
     height: 100%;
 }
 
@@ -29,6 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
+    background-color: #417690;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     flex: 1 0 auto;
+    background-color: var(--white);
 }
 
 /* Footer */
@@ -57,7 +57,7 @@ footer {
 
 /* Header */
 .navbar {
-    background-color: #00ABE4;
+    background-color: var(--off-white);
     box-shadow: var(--smal-box-shadow);
 }
 
@@ -73,7 +73,7 @@ img.logo {
 
 /* ----- */
 
-.active {
+/* .active {
     border-bottom: 2px solid var(--blue);
     font-weight: 500;
 }
@@ -90,12 +90,14 @@ body {
     flex-direction: column;
     height: calc(100vh - 60px);
     justify-content: center;
-    overflow-x: hidden; 
-}
+    overflow-x: hidden; /* Hide horizontal scrollbar on smaller screens 
+}*/
 
-header {
+/* header {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    height: 60px;
     background-color: #00ABE4;
     color: white;
 }
@@ -118,23 +120,52 @@ a {
     justify-content: center;
 }
 
-.btn {
+.form-container {
+    display: none;
+    width: 100%;
+    background: linear-gradient(#212121, #212121) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
     background-color: #E9F1FA;
     color: #00ABE4;
     margin: 0;
-    padding: 5px;
+    padding: 0;
     border-radius: 5px;
 }
 
-.btn:hover {
+button:hover {
     background-color: #4c4d4f;
+}
+
+#center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 h2, p {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-}  
+}  */
 
 @media screen and (min-width: 768px) {
     .container {
@@ -167,6 +198,13 @@ h2, p {
         width: 100%;
     }
 
+    .form-container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70%; /* Adjust the width as needed */
+    }
 }
 
 @media screen and (min-width:40em){
