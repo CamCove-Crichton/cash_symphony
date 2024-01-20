@@ -162,5 +162,3 @@ def calculateOutgoingExpense(year_and_month):
     sum_str = str("{:.2f}".format(sum_int))
     return sum_str
 
-print("test calculateOutgoingExpense in views.py")
-print(calculateOutgoingExpense((2024, 1)))

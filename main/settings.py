@@ -17,9 +17,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 if os.path.exists('env.py'):
     import env
-
+"""
 from dotenv import load_dotenv
 load_dotenv()
+"""
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -31,7 +32,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
