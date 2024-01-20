@@ -1,64 +1,8 @@
-from django.views.generic import TemplateView, View
-from django.shortcuts import render
 from datetime import datetime
 import calendar
 from decimal import Decimal
-
-
-class Index(TemplateView):
-    template_name = 'home/index.html'
-
-
-"""
-If you will test the function, please enter some expense data (line 38-59),
-put them in 1) list of once off payments and in 2) list of recurring payments
-and call calculateOutgoingExpenses((2024, 1)) for example for 2024 January
-at the bottom of this code (line 161)
-
-part up to line 59 will be removed for production.
-
-"""
-class Expense:
-    """
-    the following class is only to make some dummy expense data.
-    We need to make django model.  need to come up with right fields later.
-    also need budget_month (for once_off expenses only, to show
-    the budjet of which month the data belongs to), created_on...etc
-    """
-    def __init__(self, name, amount, payment_type, payment_date, frequency, start_date, end_date):
-        self.name = name
-        self.amount = amount
-        self.payment_type = payment_type # recurring or once off
-        self.payment_date = payment_date # no need to fill if recurring
-        # below are only for recurring expenses
-        # if once_off, leave them "" or None.
-        self.frequency = frequency # daily, weekly, monthly or ""
-        self.start_date = start_date
-        self.end_date = end_date
-
- # for now, using Expense class, make some dummy data.
-# first make some datetime obj
-format = format = '%Y-%m-%d'
-date1 = datetime.strptime("2024-01-05", format)
-date2 = datetime.strptime("2024-01-07", format)
-date3 = datetime.strptime("2024-01-08", format)
-# Expense class objects (name, amount, type, payment_date, frequency, start_date, end_date)
-exp1 = Expense("exp1", "19.95", "once_off", date1, "", None, None)
-exp2 = Expense("exp2", "55.25", "once_off", date2, "", None, None)
-# put them in list of once off expenses
-list_once_off_exp = [exp1, exp2]
-
-# make expense obj for recurring payments and put them in
-# the list of recurring expenses
-date3 = datetime.strptime("2023-12-01", format)
-date4 = datetime.strptime("2024-01-01", format)
-date5 = datetime.strptime("2024-03-31", format)
-# Expense class objects (name, amount, type, payment_date, frequency, start_date, end_date)
-exp3 = Expense("exp3", "20.45", "recurring", None, "daily", date3, date4)
-exp4 = Expense("exp4", "90.00", "recurring", None, "weekly", date4, date5)
-exp5 = Expense("exp5", "1000.00", "recurring", None, "monthly", date3, None)
-
-list_recurr_exp = [exp3, exp4, exp5]
+from .models import Expense
+# from home.models import Profile (when ready)
 
 
 def get_num_of_weekly_payments(start_date, first_day, last_day):
@@ -88,7 +32,7 @@ def get_num_of_weekly_payments(start_date, first_day, last_day):
     return num_occ
 
 
-def calculateOutgoingExpense(year_and_month):
+def get_outgoing_expense(year_and_month):
     """
     calculate and return the sum of outgoing expenses
     in a given month
@@ -115,21 +59,13 @@ def calculateOutgoingExpense(year_and_month):
     first_day_next_month = first_day_month.replace(month=nextMonth)
 
     # get expenses for the current month. (once off & recurring but irregular ones)
-    """
-    list_once_off_exp = Expense.objects.filter(budget_month=f"{year}-{month}")
-                                .order_by('payment_date')
-    """
+    list_once_off_exp = Expense.objects.filter(budget_month=f"{year}-{month}").order_by('payment_date')
     # get the sum of once-off expenses for the month
     sum_once_off_exp = sum(Decimal(expense.amount) for expense in list_once_off_exp)
-
     # get regularly recurring expenses that will happen in the current month
     # (those with 'frequency' value of daily, weekly or monthly AND
     #  that haven't been stopped earlier than that month)
-    """
-    list_recurr_exp = Expense.objects.filter(frequency!="",
-                            (end_date=None | end_date__gt=first_day_month))
-                            .order_by('created_on')
-    """
+    list_recurr_exp = Expense.objects.filter(type="recurring", end_date__gte=first_day_month).order_by('created_on')
     sum_recurr_exp = 0
     last_day = None
     first_day = None
@@ -158,7 +94,16 @@ def calculateOutgoingExpense(year_and_month):
             # if 'monthly'
             num_occ = 1
         sum_recurr_exp += Decimal(item.amount) * num_occ
-    sum_int = sum_once_off_exp + sum_recurr_exp
-    sum_str = str("{:.2f}".format(sum_int))
+    sum_decimal = sum_once_off_exp + sum_recurr_exp
+    sum_str = str("{:.2f}".format(sum_decimal))
     return sum_str
 
+def get_remaining_budget(user_id, month, year):
+    """
+    profile = Profile.objects.filter(owner=user)[0]
+    year_month = tuple(year, month)
+    expenses = get_outgoing_expense(year_month)
+    amount = Decimal(profile.income) - Decimal(expenses)
+    """
+    amount = "3500.00"
+    return amount
