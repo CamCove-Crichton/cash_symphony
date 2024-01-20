@@ -48,6 +48,7 @@ footer {
     justify-content: center;
     align-items: center;
     border-top: var(--border);
+    background-color: #417690;
 }
 
 .social-icon {
