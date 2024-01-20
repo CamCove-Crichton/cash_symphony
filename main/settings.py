@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     #Apps
     'crispy_forms',
+    'crispy_bootstrap5',
     'home',
     'budget',
     'profiles',
@@ -60,6 +61,8 @@ INSTALLED_APPS = [
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+CSRF_TRUSTED_ORIGINS = ["https://localhost:8000"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
