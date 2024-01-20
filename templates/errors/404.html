@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="left">
+            <!-- Requires image -->
+            <img src="#" alt="" />
+        </div>
+        <div class="separator"></div>
+        <div class="right">
+            <div class="right-content">
+                <h2 class="form-heading">
+                404 - Page Not Found
+                </h2>
+                <p>Oh No! You Took a Detour Looking for Your Budget. We are Searching the Sofa for Loose Change to Get You Back on Track.</p>
+                <a href="{% url 'home' %}"><button id="center-button">Back to Safety</button></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
