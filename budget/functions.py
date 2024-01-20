@@ -2,7 +2,7 @@ from datetime import datetime
 import calendar
 from decimal import Decimal
 from .models import Expense
-# from home.models import Profile (when ready)
+# from home.models import Profile
 
 
 def get_num_of_weekly_payments(start_date, first_day, last_day):
@@ -42,11 +42,12 @@ def get_outgoing_expense(year_and_month):
     # get the year and month of interest
     year = year_and_month[0]
     month = year_and_month[1]
-    # get the number of days in the month (28, 29, 30, 31...)
+    # get the total days in the month
     num_days_month = calendar.monthrange(year, month)[1]
     if len(str(month)) == 1:
         str_month = f"0{month}"
-    # create datetime object of the first of that month
+    # create datetime object of the first day of that month
+    format = "%Y-%m-%d"
     first_day_month = datetime.strptime(f"{year}-{str_month}-01", format)
     # datetime obj of last day of the month
     last_day_month = first_day_month.replace(day=num_days_month)
@@ -105,10 +106,11 @@ def get_remaining_budget(user_id, month, year):
     :rtype: str
     """
     """Comment the following when Profile model is ready.
-    profile = Profile.objects.filter(owner=user)[0]
+    profile = Profile.objects.filter(owner=user)[0] # if not working, id=user.id?
     year_month = tuple(year, month)
     expenses = get_outgoing_expense(year_month)
     amount = Decimal(profile.income) - Decimal(expenses)
+    amount_str = str("{:.2f}".format(amount))
     """
-    amount = "3500.00" # remove this later
-    return amount
+    amount_str = "3500.00" # remove this later
+    return amount_str

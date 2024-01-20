@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 # status of posts
 TYPE = ((0, "once_off"), (1, "recurring"))
-
 FREQUENCY = ((0, "NA"), (1, "daily"), (2, "weekly"), (3, "monthly"))
 
 

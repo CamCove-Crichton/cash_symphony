@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .functions import get_num_of_weekly_payments, get_outgoing_expense
+from .functions import get_outgoing_expense, get_remaining_budget
 
 
 """
@@ -9,8 +9,8 @@ happy coding!!
 get_remaining_budget(1, 1, 2024)
     arg: request.user.id(int), month(int), year(int)
     return: string
-When Profile model is done, please comment
-line 5 and the bottom of functions.py
+please comment
+line 5 and the bottom of functions.py when profile's done.
 
 get_outgoing_expense((2024, 1))
     arg: tuple(int: year, int: str)
