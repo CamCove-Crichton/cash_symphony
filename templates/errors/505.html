@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}505{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="left">
+            <img src="#" alt="" />
+        </div>
+        <div class="separator"></div>
+        <div class="right">
+            <div class="right-content">
+                <h2 class="form-heading">
+                505 - Our budget calculator got tangled in the numbers!
+                </h2>
+                <p>We apologize for the budgetary confusion. Our team of accountants is working hard to untangle the financial knots. Please check back in a moment!</p>
+                <a href="{% url 'home' %}"><button id="center-button">Back to Safety</button></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
