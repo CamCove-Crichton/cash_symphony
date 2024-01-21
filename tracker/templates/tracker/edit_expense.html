@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <h2>Edit Expense</h2>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Update Expense</button>
+    </form>
+    <a href="{% url 'list_expenses' %}" class="btn btn-secondary">Back to Expenses List</a>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load app_filters %}
+
+{% block title %}Expenses{% endblock %}
+
+{% block content %}
+<div class="container justify-content-center d-flex flex-row flex-wrap justify-content-center">
+    <h1 class="text-center p-2">
+        Your Expenses {{ request.user.username }}
+    </h1>
+
+    <div class="mb-3 justify-content-center">
+        <a href="{% url 'add_expense' %}" class="btn btn-success">Add Expense</a>
+    </div>
+
+    {% for date, expenses in expenses_grouped.items %}
+    <div class="card mb-3 container justify-content-center">
+        <div class="card-header">
+            Date: {{ date }}
+            <!-- Display the total amount for the day -->
+            <div><strong>Total Amount:</strong> {{ daily_totals|get_item:date }}</div>
+        </div>
+        <div class="card-body">
+            {% for expense in expenses %}
+            <div class="row g-0 mb-2">
+                <div class="col-md-8">
+                    <h5 class="card-title">{{ expense.title }}</h5>
+                    <p class="card-text">
+                        <strong>Amount:</strong> {{ expense.amount }}<br>
+                        <strong>Category:</strong> {{ expense.type }}
+                    </p>
+                </div>
+                <div class="text-center">
+                    <a href="{% url 'edit_expense' expense.id %}" class="btn btn-primary w-25">Edit</a>
+                    <a href="{% url 'delete_expense' expense.id %}" class="btn btn-danger w-25">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% empty %}
+    <div class="alert alert-info" role="alert">
+        No expenses recorded.
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

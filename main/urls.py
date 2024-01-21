@@ -23,7 +23,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
-    path('budget/', include('budget.urls')),
+    # path('budget/', include('budget.urls')),
+    #path('budget/', include(('budget.urls', 'budget'), namespace='budget')),
+    path('tracker/', include('tracker.urls')),
     path('profiles/', include('profiles.urls')),
 ]
 

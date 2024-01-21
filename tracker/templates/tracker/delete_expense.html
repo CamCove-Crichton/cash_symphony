@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center d-flex flex-column align-items-center">
+    <h1 class="text-center p-2">Delete Expense</h1>
+    
+    <div class="card mb-3 container justify-content-center">
+        <div class="card-body">
+            <p class="text-center">Are you sure you want to delete "{{ expense.title }}"?</p>
+            <form method="post" class="text-center">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                <a href="{% url 'list_expenses' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

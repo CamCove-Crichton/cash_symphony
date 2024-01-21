@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center d-flex flex-column align-items-center">
+    <h1 class="text-center p-2">Add New Expense</h1>
+    
+    <div class="card mb-3 container justify-content-center">
+        <div class="card-body">
+            <form method="post" class="form-group">
+                {% csrf_token %}
+                {{ form.media}}
+                {{ form|crispy }}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Add Expense</button>
+                    <a href="{% url 'list_expenses' %}" class="btn btn-secondary">Back to Expenses List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -85,7 +85,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    /* height: calc(100vh - 60px); */
     justify-content: center;
     overflow-x: hidden; 
 }
@@ -116,15 +116,29 @@ a {
 }
 
 .btn {
-    background-color: #E9F1FA;
-    color: #00ABE4;
-    margin: 0;
-    padding: 5px;
-    border-radius: 5px;
+    background-color: var(--blue); /* Primary button color */
+    color: var(--white); /* Text color */
+    margin: 10px 5px 0; /* Top margin added, right and left margins as before, no bottom margin */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor pointer */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    font-weight: 500; /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 0.875rem; /* Font size */
+    box-shadow: var(--smal-box-shadow); /* Box shadow from your variables */
 }
 
-.btn:hover {
-    background-color: #4c4d4f;
+.btn:hover, .btn:focus {
+    background-color: var(--orange); /* Color when hovered or focused */
+    color: var(--black); /* Text color when hovered or focused */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.btn:active {
+    transform: translateY(1px); /* Slight push effect when clicked */
+    box-shadow: none; /* Remove box shadow when clicked */
 }
 
 h2, p {
@@ -133,9 +147,12 @@ h2, p {
     margin-right: 10%;
 }  
 
+
+
+
 @media screen and (min-width: 768px) {
     .container {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .left,
