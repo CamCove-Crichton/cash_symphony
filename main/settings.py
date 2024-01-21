@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 
 ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost',
-                "https://cash-symphony-0a6254cc8639.herokuapp.com/"]
+                "cash-symphony-0a6254cc8639.herokuapp.com/"]
 
 
 # Application definition
