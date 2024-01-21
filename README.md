@@ -98,7 +98,7 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
 
 ### Style and colours
 #### Color Palette <br>
-The project's refreshed blue palette, synonymous with stability and trust, resonates seamlessly with the core theme of taking control of your finances. Embrace the calming shades for a visual journey that instills financial stability, reliability, and mastery. <br>
+The project's refreshed blue palette, synonymous with stability and trust, resonates seamlessly with the core theme of taking control of your finances. Embrace the calming shades for a visual journey that instills financial stability, reliability, and mastery. This palette was created using HTML and CSS<br>
 ![Color Palette Image](./static/images/readme/color%20palette.png) <br>
 #### Typography
 The project boasts a professional aesthetic, thanks to the well-coordinated pairing of [EB Garamond](https://fonts.google.com/specimen/EB+Garamond) and [Roboto](https://fonts.google.com/specimen/Roboto) which seamlessly complement each other.
@@ -189,21 +189,25 @@ The project boasts a professional aesthetic, thanks to the well-coordinated pair
 - [GitHub](https://github.com/) - GithHub is the hosting site used to store the source code for the Website and Git Pages is used for the deployment of the live site.
 - [Git](https://git-scm.com/) was used as version control software to commit and push code to the GitHub repository where the source code is stored.
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used as a testing tool during the development of the application. 
-- [Google Fonts](https://fonts.google.com/) was used to import the fonts [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open) and [Playfair Display](https://fonts.google.com/specimen/Playfair+Display?query=playfair)
+- [Google Fonts](https://fonts.google.com/) was used to import the fonts [EB Garamond](https://fonts.google.com/specimen/EB+Garamond) and [Roboto](https://fonts.google.com/specimen/Roboto)
 - [Font Awesome](https://fontawesome.com/) was used for icons.
 - [Balsamiq Wireframes](https://balsamiq.com/wireframes/) was used to create the wireframes for the mobile version of the application.
-- [Photoshop](https://www.adobe.com/ie/products/photoshop.html) was used to create the desktop mockups and resize and export the images for web. 
+- [Unsplash](https://unsplash.com/s/photos/budget) was used to source images. 
+- [Adobe Firefly AI](https://www.adobe.com/products/firefly.html) to create images 
 - [Coolors.co](https://coolors.co/) was used to display the colour palette
 - [Favicon.io](https://favicon.io/) was used to create the favicon for the website.
 - [Exchangerates API](https://exchangeratesapi.io/)was used for the currency converter
 
 
+
+
 ## Languages
-- HTML - used to build the main structure of the website.
-- CSS - custom written CSS was used as an addition to Materialize. 
-- [Materialize Framework](https://materializecss.com/) - used throughout the website for layout and styling.
-- JavaScript - was used to create functionality for the calculator.
-- [Jquery](https://jquery.com/)
+- HTML - used in constructing the primary framework of the website.
+- CSS - to control the visual presentation and layout of elements.
+- JavaScript - to create a user interface for inputting, calculating, and displaying budget-related information.
+- Python - to facilitate backend development of the website
+
+To support the Languages, Django was used to 
 
 [Back to top](#Table-of-contents)
 
