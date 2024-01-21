@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_resized import ResizedImageField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -11,7 +12,7 @@ from django_resized import ResizedImageField
 class UserProfile(models.Model):
     '''User profile'''
     username = models.ForeignKey(User,related_name="profile", on_delete=models.CASCADE)
-    profile_picture = ResizedImageField(size=[300,300], quality=75, upload_to="profiles/", force_format="WEBP", blank=True)
+    profile_picture = CloudinaryField('image', blank=True)
     email = models.EmailField(max_length=254)
     job_title = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
