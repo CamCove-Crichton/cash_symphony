@@ -33,7 +33,8 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = False
 
 
-ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost']
+ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost',
+                "cash-symphony-0a6254cc8639.herokuapp.com/"]
 
 
 # Application definition
