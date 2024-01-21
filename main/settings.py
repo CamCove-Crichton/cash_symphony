@@ -29,11 +29,11 @@ load_dotenv()
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 
-ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost',
-                "https://cash-symphony-0a6254cc8639.herokuapp.com/"]
+ALLOWED_HOSTS = [os.environ.get("HOST"), 'localhost']
 
 
 # Application definition
