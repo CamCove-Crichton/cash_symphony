@@ -9,13 +9,13 @@ Responsive Image
 
 During our collaborative and brainstorming sessions, we recognized and valued the unique talents of each team member, aiming to select a project that would be captivating for everyone. This led us to collectively decide to build a front-end application, enabling each team member to actively engage in its development.
 
-Using Budget Busters: New Year, New Numbers theme, we developed an application that enables users to enhance their expense tracking. Through forexample, a chart generated from the data that the user inputs, this allows the user to visually compare the distribution of their salary or income across various expenditures.
+Using "Budget Busters: New Year, New Numbers" theme, we developed an application that enables users to enhance their expense tracking. Through forexample, a chart generated from the data that the user inputs, this allows the user to visually compare the distribution of their salary or income across various expenditures.
 
 ---
 
 ## Table of contents
 
-- [5 Bucket Calculator](#5-bucket-calculator)
+- [Cash Symphony](http://your-deployed-link.com/)
   - [Table of contents](#table-of-contents)
   - [UX](#ux)
     - [User Stories](#user-stories)
@@ -23,15 +23,15 @@ Using Budget Busters: New Year, New Numbers theme, we developed an application t
   - [Back to top](#back-to-top)
   - [Wireframes](#wireframes)
     - [Desktop](#desktop)
-      - [Main Page ](#main-page-)
-      - [Calculator ](#calculator-)
-      - [Tips Page ](#tips-page-)
-      - [About Page ](#about-page-)
+      - [Main Page](#main-page)
+      - [Signup and Login](#signup-and-login)
+      - [User Profile ](#user-profile)
+      - [Budget page ](#budget-page-)
     - [Mobile](#mobile)
       - [Main Page ](#main-page--1)
-      - [Calculator ](#calculator--1)
-      - [Tips Page ](#tips-page--1)
-      - [About Page ](#about-page--1)
+      - [Signup and Login](#signup--1)
+      - [User Profile ](#user-profile--1)
+      - [Budget page ](#budget-page--1)
     - [Style and colours](#style-and-colours)
       - [Color Palette ](#color-palette-)
       - [Typography](#typography)
@@ -75,19 +75,22 @@ Using Budget Busters: New Year, New Numbers theme, we developed an application t
 ## Wireframes
 ### Desktop
 #### Main Page <br>
-![Main page design](./assets/imgs/home-page.PNG) <br>
-#### Calculator <br>
-![Calculator design](./assets/imgs/calculator.PNG) <br>
-#### About Page <br>
-![About page mock up design](./assets/imgs/mockups/about.PNG) <br>
+![Main page design](./static/images/readme/landing_page.png) <br>
+#### Signup and Login Page <br>
+![Signup and login page design](./static/images/readme/signup_login.png) <br>
+#### User Profile page <br>
+![User profile page design](./static/images/readme/user_profile.png) <br>
+#### Budget page <br>
+![Budget page design](./static/images/readme/budget.png) <br>
 ### Mobile
 #### Main Page <br>
 ![Main page design](./assets/imgs/home-page.PNG) <br>
-#### Calculator <br>
-![Calculator design](./assets/imgs/calculator.PNG) <br>
-#### About Page <br>
-![About page mock up design](./assets/imgs/mockups/about.PNG) <br>
-[Back to top](#Table-of-contents)
+#### Signup and Login Page <br>
+![Signup and login page design](./static/images/readme/) <br>
+#### User Profile page <br>
+![User profile page design](./static/images/readme/) <br>
+#### Budget page <br>
+![Budget page design](./static/images/readme/) <br>
 
 
 
@@ -95,17 +98,13 @@ Using Budget Busters: New Year, New Numbers theme, we developed an application t
 
 ### Style and colours
 #### Color Palette <br>
-The colour palette for this project is based on the purple colour scheme. The purple colour is considered to be a colour of creativity and imagination and complements beautifully the project idea. <br>
-Background colour #f2f2fc Ghost White <br> 
-Hero background color #ffffff White
-Text colour #332a7c Picotee Blue <br>
-Footer background #d3d3f1 and #a9a9d7 Light Periwinkle and Blue Bell <br> 
-![Color Palette Image](./assets/imgs/mockups/colors.PNG) <br>
+The project's refreshed blue palette, synonymous with stability and trust, resonates seamlessly with the core theme of taking control of your finances. Embrace the calming shades for a visual journey that instills financial stability, reliability, and mastery. <br>
+![Color Palette Image](./static/images/readme/color%20palette.png) <br>
 #### Typography
-The fonts used are [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open) and [Playfair Display](https://fonts.google.com/specimen/Playfair+Display?query=playfair) which really complement eachother and give the project professional look. 
+The project boasts a professional aesthetic, thanks to the well-coordinated pairing of [EB Garamond](https://fonts.google.com/specimen/EB+Garamond) and [Roboto](https://fonts.google.com/specimen/Roboto) which seamlessly complement each other.
 
 ### Imagery
-[Creative Fabrica](https://www.creativefabrica.com/) The images used are from Creative Fabrica and come with license for commercial use. 
+[Unsplash](https://unsplash.com/s/photos/budget) Most of the images used are sourced from Unsplash and are licensed for commercial use. A couple of images were also created using Adobe Firefly AI.
 
 [Back to top](#Table-of-contents)
 
