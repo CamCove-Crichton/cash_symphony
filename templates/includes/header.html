@@ -1,17 +1,27 @@
 {% load static %}
 
 <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg w-100">
         <div class="container-fluid">
           <!-- Logo -->
           <a class="navbar-brand" href="#"><img src="{% static 'images/website-logo.png' %}" alt="Recipe Sharing & Meal Planner Logo" class="logo"></a>
 
+          <!-- Add the toggler button for smaller screens -->
+          <button class="navbar-toggler mr-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <h1 class="d-lg-none"><span class="rainbow">Cash Symphony</span></h1> <!-- Move the h1 element for smaller screens -->
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link {% if url_name == 'view_budget' %}active{% endif %}" href="{% url 'view_budget' %}">Budget</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link {% if url_name == 'profile' %}active{% endif %}" href="{% url 'profile' request.user.id %}">Profile</a>
               </li>
@@ -27,11 +37,9 @@
               </li>
               {% endif %}                            
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
+            <h1 class="d-none d-lg-block"><span class="rainbow ms-auto">Cash Symphony</span></h1> <!-- Keep the h1 element on larger screens -->
           </div>
         </div>
-      </nav>
+    </nav>
 </header>

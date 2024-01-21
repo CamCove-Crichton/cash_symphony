@@ -1,24 +1,24 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% load i18n %}
+{% load account socialaccount %}
+{% load crispy_forms_filters %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
-
-<!-- crispy forms -->
-{% load crispy_forms_tags %}
+{% block title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign Up" %}</h3>
+    <div class="left">
+        <div class="text-center mt-5">
+            <h2>{% trans "Sign Up" %}</h2>
 
-            <p>{% blocktrans %}Welcome back to the code|star blog. Do you already have an account? Then please <a
+            <p>{% blocktrans %}Welcome to the <span class="rainbow">Cash Symphony</span> app. Do you already have an account? Then please <a
                     class="link" href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="right">
+                <div class="form-container">
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form|crispy }}

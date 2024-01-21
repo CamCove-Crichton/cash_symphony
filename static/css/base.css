@@ -164,9 +164,18 @@ button:hover {
 
 h2, p {
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-}  */
+
+    margin-left: 5%;
+    margin-right: 5%;
+}  
+
+.rainbow {
+    background: linear-gradient(90deg, #800000, #ff6600, #808000, #008000, #000080, #4b0082, #800080);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
 
 @media screen and (min-width: 768px) {
     .container {
