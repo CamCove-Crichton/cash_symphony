@@ -12,19 +12,19 @@
                 {% if profile.profile_picture.url is not none %}
                 <img class="propic" src="{{ profile.profile_picture.url}}" alt="{{profile.username}}'s profile image">
                 {% else %}
-                <img src="{% static '/icons/no-photography-icon.svg' %}" alt="Image not found icon">
+                <img class="propic" src="{% static '/icons/no-photography-icon.svg' %}" alt="Image not found icon">
                 {% endif %}
             </div>
             <h1 style="text-align: center; margin-bottom: 30px; margin-top: 50px; font-weight: 700; text-decoration: underline;">{{ profile.username }}</h1>
-            <p><strong>Job Title:</strong>{{profile.job_title}}</p>
-            <p><strong>Salary:</strong>{{profile.salary}}</p>
-            <p><strong>Currency:</strong>{{profile.currency}}</p>
-            <p><strong>Location:</strong>{{profile.location}}</p>
-            <p><strong>Monthly Budget Limit:</strong>{{profile.monthly_budget_limit}}</p>
+            <p><strong>Job Title: </strong>{{profile.job_title}}</p>
+            <p><strong>Salary: </strong>{{profile.salary}}</p>
+            <p><strong>Currency: </strong>{{profile.currency}}</p>
+            <p><strong>Location: </strong>{{profile.location}}</p>
+            <p><strong>Monthly Budget Limit: </strong>{{profile.monthly_budget_limit}}</p>
             <!-- <p>Debug Profile ID: {{ request.user.id  }}</p> -->
             {% if request.user == profile.username %}
             <div style="text-align: center; margin-top: 30px;">
-                <button id="myBtn" class="btn btn-primary w-25 mb-4">Update!</button>
+                <button id="myBtn" class="btn btn-primary mb-4">Update!</button>
             </div>
             {% endif %}
         </div>
