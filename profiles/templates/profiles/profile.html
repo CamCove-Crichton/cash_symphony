@@ -10,17 +10,18 @@
         <div class="info">
             <div class="profile-img text-center">
                 {% if profile.profile_picture.url is not none %}
-                <img src="{{ profile.profile_picture.url}}" alt="{{profile.user.username}}'s profile image">
+                <img src="{{ profile.profile_picture.url}}" alt="{{profile.username}}'s profile image">
                 {% else %}
                 <img src="{% static '/icons/no-photography-icon.svg' %}" alt="Image not found icon">
                 {% endif %}
             </div>
-            <h1>{{ profile.user.username }}</h1>
+            <h1>{{ profile.username }}</h1>
             <p><strong>Job Title:</strong>{{profile.job_title}}</p>
             <p><strong>Salary:</strong>{{profile.salary}}</p>
             <p><strong>Currency:</strong>{{profile.currency}}</p>
             <p><strong>Location:</strong>{{profile.location}}</p>
             <p><strong>Monthly Budget Limit:</strong>{{profile.monthly_budget_limit}}</p>
+            <!-- <p>Debug Profile ID: {{ request.user.id  }}</p> -->
             {% if request.user == profile.username %}
             <button id="myBtn" class="btn btn-primary w-25 mb-4">Edit</button>
             {% endif %}
@@ -30,7 +31,7 @@
         <!-- Modal content -->
         <div class="modal-content container">
             <span class="close fs-1 pe-2">&times;</span>
-            <form method="POST" action="{% url 'edit_profile' profile.id %}" class="mb-2 p-2"
+            <form method="POST" action="{% url 'edit_profile' request.user.id %}" class="mb-2 p-2"
                 enctype="multipart/form-data">
                 <h2 class="text-center fs-4">Edit Profile</h2>
                 {% csrf_token %}

@@ -6,6 +6,9 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, UpdateView
 from .models import UserProfile
 from .forms import ProfileForm
+from django.contrib.auth.models import User
+from django.urls import reverse
+
 
 
 class Profiles(TemplateView):
@@ -29,14 +32,35 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = UserProfile
 
     def form_valid(self, form):
-        form.save()
-        pk = self.kwargs["pk"]
-        self.success_url = f'/profiles/username/{pk}/'
+        self.success_url = reverse("profile", args=[str(self.kwargs["pk"])])
         return super().form_valid(form)
-
     
+
+    def get_object(self, queryset=None):
+        # If your ForeignKey in UserProfile is named `username` and has `related_name='profile'`:
+        return UserProfile.objects.get(username__id=self.kwargs["pk"])
+
     def test_func(self):
         profile = self.get_object()
-        return self.request.user == profile.username
+        return self.request.user == profile.username    
+
+
+    # def get_object(self, queryset=None):
+    #     user = User.objects.get(pk=self.kwargs["pk"])
+    #     return user.profile
+
+    # def test_func(self):
+    #     return self.request.user == self.get_object().user
+
+    # def form_valid(self, form):
+    #     form.save()
+    #     pk = self.kwargs["pk"]
+    #     self.success_url = f'/profiles/username/{pk}/'
+    #     return super().form_valid(form)
+
+    
+    # def test_func(self):
+    #     profile = self.get_object()
+    #     return self.request.user == profile.username
 
     
