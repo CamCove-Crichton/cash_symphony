@@ -1,34 +1,109 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Budget App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Welcome to the Budget App</h1>
-    <p>Start managing your finances today!</p>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cash Symphony - Budget Calculator</title>
+    <meta name="description" content="Easily manage your finances with Cash Symphony budget calculator." />
+    <meta name="keywords" content="budget, calculator, finance, Cash Symphony" />
 
-  <main>
-    <section>
-      <h2>Track Your Expenses</h2>
-      <p>Keep a record of your income and expenses to stay on top of your budget.</p>
-    </section>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/base.css">
+  </head>
 
-    <section>
-      <h2>Create Budget Goals</h2>
-      <p>Set financial goals and track your progress towards achieving them.</p>
-    </section>
+  <body class="leading-normal tracking-normal text-gray-800 m-6">
+    <div class="h-full">
+      <!--Nav-->
+      <div class="w-full container mx-auto">
+        <div class="w-full flex items-center justify-between">
+          <a class="flex items-center text-blue-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            Cash <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">Symphony</span>
+          </a>
 
-    <section>
-      <h2>Analyze Your Spending</h2>
-      <p>Get insights into your spending habits and identify areas for improvement.</p>
-    </section>
-  </main>
+          <div class="flex w-1/2 justify-end content-center">
+            <a class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://github.com/CamCove-Crichton/cash_symphony">
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                  d="M16 0C7.16 0 0 7.16 0 16c0 7.07 4.59 13.05 10.94 15.14.8.15 1.09-.35 1.09-.78 0-.38-.01-1.39-.02-2.73-4.45.97-5.37-2.14-5.37-2.14-.73-1.85-1.78-2.34-1.78-2.34-1.46-1 .11-1 .11-1 1.61.11 2.46 1.65 2.46 1.65 1.43 2.45 3.75 1.74 4.66 1.33.15-1.04.56-1.74 1.02-2.14-3.56-.4-7.3-1.78-7.3-7.92 0-1.75.62-3.18 1.65-4.3-.17-.4-.72-2.04.16-4.24 0 0 1.34-.43 4.4 1.64A15.43 15.43 0 0 1 16 6.47c1.37.01 2.75.19 4.04.56 3.06-2.07 4.4-1.64 4.4-1.64.88 2.2.33 3.84.16 4.24 1.03 1.12 1.65 2.55 1.65 4.3 0 6.15-3.75 7.52-7.32 7.92.58.49 1.09 1.46 1.09 2.95 0 2.13-.02 3.84-.02 4.37 0 .43.29.93 1.1.78C27.41 29.05 32 23.07 32 16c0-8.84-7.16-16-16-16z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+              href="https://www.facebook.com/sharer/sharer.php?u=#"
+            >
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <footer>
-    <p>&copy; 2022 Budget App. All rights reserved.</p>
-  </footer>
-</body>
+      <!--Main-->
+      <!-- FILEPATH: /c:/Users/User/cashsymphony/cash_symphony/landing.html -->
+      <!-- BEGIN: ed8c6549bwf9 -->
+      <div class="container pt-24 md:pt-36 mx-auto">
+        <div class="bg-white shadow-lg rounded-lg px-8 py-12 md:p-16">
+          <div class="text-center md:text-left">
+            <h1 class="my-4 text-3xl md:text-5xl text-gray-800 font-bold leading-tight">
+              Take Control of Your Finances with
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+                Cash Symphony
+              </span>
+            </h1>
+            <p class="leading-normal text-base md:text-2xl text-gray-700 mb-8">
+              Easily manage your budget and track your spending. Cash Symphony helps you achieve financial harmony.
+            </p>
+
+            <a href="budget.html" class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- END: ed8c6549bwf9 -->
+
+      <!--Right Col-->
+      <div class="w-full flex justify-center">
+        <div class="w-full xl:w-3/5 p-12 overflow-hidden">
+          <img class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6 rounded-lg shadow-lg" src="static/images/budget3.jpg" alt="Budget Calculator" />
+        </div>
+        <div class="w-full xl:w-3/5 p-12 overflow-hidden">
+          <img class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6 rounded-lg shadow-lg" src="static/images/budget2.jpg" alt="Budget Calculator" />
+        </div>
+      </div>
+    </div>
+
+
+      
+    </div>
+  </body>
+</html>
+          </div>
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="mx-auto md:pt-16">
+          <p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center">
+            Download our app:
+          </p>
+          <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+            <img src="App Store.svg" class="h-12 pr-12 transform hover:scale-125 duration-300 ease-in-out" alt="App Store" />
+            <img src="Play Store.svg" class="h-12 transform hover:scale-125 duration-300 ease-in-out" alt="Play Store" />
+          </div>
+        <!--Right Col-->
+
+        <footer class="bg-blue-900-white mt-auto text-center py-4">
+          <div class="max-w-7 mx-auto">
+            <p>&copy; 2024 Hedge Fund Hackers. All rights reserved.</p>
+       </div>
+        </footer>
+      </body>
 </html>
