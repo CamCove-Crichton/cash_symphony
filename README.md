@@ -1,11 +1,11 @@
-# [Cash Symphony](http://your-deployed-link.com/)
+# [Cash Symphony](https://cash-symphony-0a6254cc8639.herokuapp.com/)
 
-The [Cash Symphony](http://your-deployed-link.com/) is a Budget App built under the theme Budget Busters: New Year, New Numbers for the January Hackathon Project. 
+The [Cash Symphony](https://cash-symphony-0a6254cc8639.herokuapp.com/) is a Budget App built under the theme Budget Busters: New Year, New Numbers for the January Hackathon Project. 
 
 Embark on a journey towards financial empowerment with our cutting-edge budget app designed to revolutionize the way you manage your finances. Whether you're a seasoned budgeting pro or just starting on your financial wellness path, Cash Symphony is here to simplify the process and elevate your money management experience. This is through the app helping you initiate your budgeting journey, record your finances, set realistic and attainable goals and also help you with valuable insights into your spending habits. In a nutshell the app will get you an analysis into your financial data to help you identify areas for improvement, empowering you to make informed decisions about your money.
 
 Responsive Image 
-(Deployed App Link](http://your-deployed-link.com/)
+(Deployed App Link](https://cash-symphony-0a6254cc8639.herokuapp.com/)
 
 During our collaborative and brainstorming sessions, we recognized and valued the unique talents of each team member, aiming to select a project that would be captivating for everyone. This led us to collectively decide to build a front-end application, enabling each team member to actively engage in its development.
 
@@ -15,7 +15,7 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
 
 ## Table of contents
 
-- [Cash Symphony](http://your-deployed-link.com/)
+- [Cash Symphony](https://cash-symphony-0a6254cc8639.herokuapp.com/)
   - [Table of contents](#table-of-contents)
   - [UX](#ux)
     - [User Stories](#user-stories)
@@ -24,8 +24,8 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
   - [Wireframes](#wireframes)
     - [Desktop](#desktop)
       - [Main Page](#main-page)
-      - [Signup and Login](#signup-and-login)
-      - [User Profile ](#user-profile)
+      - [Signup and Login](#signup-and-login-page)
+      - [User Profile ](#user-profile-page)
       - [Budget page ](#budget-page-frame)
     - [Style and colours](#style-and-colours)
       - [Color Palette ](#color-palette-)
@@ -46,7 +46,7 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
     - [**Cloning the repository**](#cloning-the-repository)
   - [Credits](#credits)
     - [Acknowledgements](#acknowledgements)
-  - [\*Disclaimer: This Project was created for January's Hackathon. It should not be taken as actual financial advice.](#disclaimer-this-project-was-created-for-januarys-hackathon-it-should-not-be-taken-as-actual-financial-advice)
+  - [\*Disclaimer: This project was developed for the January Hackathon-Team9 and is not intended as genuine financial advice.](#disclaimer-this-project-was-developed-for-the-january-hackathon-team9-and-is-not-intended-as-genuine-financial-advice.)
 
 ---
 
@@ -62,21 +62,24 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
   - To be able to compare spending/savings against income recieved
   - To have the site take into consideration of different currencies, allowing the site to be used in different countries. 
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 ---
 
 ## Wireframes
 ### Desktop
-#### Main Page <br>
-![Main page design](./static/images/readme/landing_page.png) <br>
-#### Signup and Login Page <br>
-![Signup and login page design](./static/images/readme/signup_login.png) <br>
-#### User Profile page <br>
-![User profile page design](./static/images/readme/user_profile.png) <br>
-#### Budget page Frame <br>
-![Budget page design](./static/images/readme/budget.png) <br>
+#### Main Page 
+![Main page design](./static/images/readme/landing_page.png)
 
+#### Signup and Login Page
+![Signup and login page design](./static/images/readme/signup_login.png)
 
+#### User Profile
+![User profile page design](./static/images/readme/user_profile.png)
+
+#### Budget Page Frame
+![Budget page design](./static/images/readme/budget.png)
+
+[Back to top](#table-of-contents)
 ---
 
 ### Style and colours
@@ -89,7 +92,7 @@ The project boasts a professional aesthetic, thanks to the well-coordinated pair
 ### Imagery
 [Unsplash](https://unsplash.com/s/photos/budget) Most of the images used are sourced from Unsplash and are licensed for commercial use. A couple of images were also created using Adobe Firefly AI.
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 
@@ -103,7 +106,7 @@ The project boasts a professional aesthetic, thanks to the well-coordinated pair
 - #### Hero sections 
 - There are three main call-to-action buttons: "Home," "Register," and "Login," inviting users to engage with the platform.
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 ### Home Page
@@ -112,7 +115,7 @@ The project boasts a professional aesthetic, thanks to the well-coordinated pair
 ![Landing Page Desktop](./static/images/readme/landing_page_desktop.png)<br><br>
 ![Landing Page Mobile](./static/images/readme/landing_page_mobile.png)
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 ### Register Page
@@ -125,7 +128,7 @@ And below is an image for a login page designed for those who already have accou
 ![Login Page Mobile](./static/images/readme/signin_mobile.png)<br>
 
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 ### Profile Page
@@ -134,7 +137,7 @@ And below is an image for a login page designed for those who already have accou
 ![Profile Page Desktop](./static/images/readme/profile_page_desktop.png)<br>
 ![Profile Page Mobile](./static/images/readme/profile_page_mobile.png)
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 ### Budget Page 
@@ -146,7 +149,7 @@ Also in this section, a user gets to track their expenses with the ability to ed
 
 ![Expenses Page](./static/images/readme/expenses-page.png)
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 
@@ -167,7 +170,7 @@ Also in this section, a user gets to track their expenses with the ability to ed
 - JavaScript - to create a user interface for inputting, calculating, and displaying budget-related information.
 - Python - to facilitate development of the website with Django providing the tools for database management.
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 
@@ -197,7 +200,7 @@ The website is deployed using GitHub pages. It automatically updates new commits
 5. Type 'git clone' and paste the URL link
 
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 
@@ -219,8 +222,8 @@ A huge appreciation to the Hackathon Team for orchestrating this event.
 
 
 
-[Back to top](#Table-of-contents)
+[Back to top](#table-of-contents)
 
 ---
 
-## *Disclaimer: This Project was created for January's Hackathon. It should not be taken as actual financial advice.
+## *Disclaimer: This project was developed for the January Hackathon-Team9 and is not intended as genuine financial advice.
