@@ -9,9 +9,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link {% if url_name == 'home' %}active{% endif %}"  href="{% url 'home' %}">Home</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
               </li>
               {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'summary' %}active{% endif %}" href="{% url 'summary' %}">Summary</a>
+            </li>
               <li class="nav-item">
                 <a class="nav-link {% if url_name == 'list_expenses' %}active{% endif %}" href="{% url 'list_expenses' %}">Track</a>
             </li>
