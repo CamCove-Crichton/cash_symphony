@@ -1,11 +1,11 @@
-# [Cash Symphony](https://cash-symphony-0a6254cc8639.herokuapp.com/)
+# [Cash Symphony](https://symphonycash-09686c002c89.herokuapp.com/)
 
-The [Cash Symphony](https://cash-symphony-0a6254cc8639.herokuapp.com/) is a Budget App built under the theme Budget Busters: New Year, New Numbers for the January Hackathon Project. 
+The [Cash Symphony](https://symphonycash-09686c002c89.herokuapp.com/) is a Budget App built under the theme Budget Busters: New Year, New Numbers for the January Hackathon Project. 
 
 Embark on a journey towards financial empowerment with our cutting-edge budget app designed to revolutionize the way you manage your finances. Whether you're a seasoned budgeting pro or just starting on your financial wellness path, Cash Symphony is here to simplify the process and elevate your money management experience. This is through the app helping you initiate your budgeting journey, record your finances, set realistic and attainable goals and also help you with valuable insights into your spending habits. In a nutshell the app will get you an analysis into your financial data to help you identify areas for improvement, empowering you to make informed decisions about your money.
 
 Responsive Image 
-(Deployed App Link](https://cash-symphony-0a6254cc8639.herokuapp.com/)
+(Deployed App Link](https://symphonycash-09686c002c89.herokuapp.com/)
 
 During our collaborative and brainstorming sessions, we recognized and valued the unique talents of each team member, aiming to select a project that would be captivating for everyone. This led us to collectively decide to build a front-end application, enabling each team member to actively engage in its development.
 
@@ -15,7 +15,7 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
 
 ## Table of contents
 
-- [Cash Symphony](https://cash-symphony-0a6254cc8639.herokuapp.com/)
+- [Cash Symphony](https://symphonycash-09686c002c89.herokuapp.com/)
   - [Table of contents](#table-of-contents)
   - [UX](#ux)
     - [User Stories](#user-stories)
@@ -41,9 +41,7 @@ Using "Budget Busters: New Year, New Numbers" theme, we developed an application
   - [Languages](#languages)
   - [Testing](#testing)
   - [Deployment](#deployment)
-    - [**GitHub Pages**](#github-pages)
-    - [**How to deploy GitHub Pages**](#how-to-deploy-github-pages)
-    - [**Cloning the repository**](#cloning-the-repository)
+    - [**How to deploy**](#how-to-deploy)
   - [Credits](#credits)
     - [Acknowledgements](#acknowledgements)
   - [\*Disclaimer: This project was developed for the January Hackathon-Team9 and is not intended as genuine financial advice.](#disclaimer-this-project-was-developed-for-the-january-hackathon-team9-and-is-not-intended-as-genuine-financial-advice.)
@@ -180,24 +178,18 @@ Also in this section, a user gets to track their expenses with the ability to ed
 
 ---
 ## Deployment
-### **GitHub Pages**
-The website is deployed using GitHub pages. It automatically updates new commits as they are pushed to the repository.
 
-### **How to deploy GitHub Pages**
-1. Login to my GitHub account
-2. Open the repository
-3. Click on Settings
-4. Scroll down and click on the Pages tab located on the left of the screen
-5. Under 'Source' select the main branch
-6. Wait for the page to refresh
-7. Scroll down to and locate the website link under the 'GitHub Pages' section
+The website is deployed using Heroku. 
 
-### **Cloning the repository**
-1. Open the repository
-2. Click the Code button above the list of files
-3. Click on GitHub CLI and click on the 'copy' button to copy the URL link
-4. Open GitPod 
-5. Type 'git clone' and paste the URL link
+### **How to deploy**
+1. Created an app in Heroku
+2. Setup an external database using Neon
+3. Installed the Heroku cli in the terminal
+4. Connected to Heroku account through the CLI
+5. Added a remote connection to app that was created in Heroku via the CLI
+6. Push to Heroku main
+7. Migrated the Django development database to the database created on Neon
+8. Committed changes and redeployed
 
 
 [Back to top](#table-of-contents)
